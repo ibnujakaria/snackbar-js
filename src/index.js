@@ -1,3 +1,3 @@
 import Snackbar from './snackbar'
 
-alert(Snackbar.message)
+window.alert(Snackbar.message)
