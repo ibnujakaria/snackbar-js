@@ -3,7 +3,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var CleanWebPackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
-  entry: './src/snackbar.js',
+  entry: {
+    snackbar: './src/snackbar.js',
+    index: './src/index.js'
+  },
   devServer: {
     contentBase: './dist'
   },
@@ -14,8 +17,24 @@ module.exports = {
       template: 'index.html'
     })
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader', 'css-loader'
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
+      }
+    ]
+  },
   output: {
-    filename: 'snackbar.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   }
 }
