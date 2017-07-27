@@ -4,14 +4,12 @@
   position: fixed;
   bottom: 0;
   background-color: #323232;
-  text-align: center;
   font-size: 14px;
   font-family: 'Roboto Regular', sans-serif;
   min-width: 288px;
   max-width: 568px;
   color: white;
   border-radius: 2px;
-  padding: 14px 24px 14px 24px;
   line-height: 1.5;
   vertical-align: center;
   box-sizing: border-box;
@@ -24,6 +22,17 @@
   left: 0;
   right: 0;
   margin: auto;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 14px 24px 14px 24px;
+  text-align: center;
+}
+
+#snackbar.left {
+  bottom: 15px;
+  left: 15px;
+  padding: 14px 48px 14px 24px;
+  text-align: left;
 }
 
 #snackbar.opened {
