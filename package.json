@@ -1,6 +1,6 @@
 {
   "name": "snackbar-js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple yet js library to display material-design-styled snackbar",
   "main": "dist/snackbar.js",
   "scripts": {
@@ -19,7 +19,8 @@
     "url": "https://github.com/ibnujakaria/snackbar-js.git"
   },
   "keywords": [
-    "Material design snackbar", "snackbar"
+    "Material design snackbar",
+    "snackbar"
   ],
   "devDependencies": {
     "babel-core": "^6.25.0",
