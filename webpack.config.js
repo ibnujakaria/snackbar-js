@@ -11,7 +11,7 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
-    new CleanWebPackPlugin(['dist']),
+    //new CleanWebPackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Snackbar in Action',
       template: 'index.html'
