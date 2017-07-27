@@ -28,6 +28,10 @@ class Snackbar {
     return this
   }
 
+  hide () {
+    snackbarDom.classList.replace('opened', 'closed')
+  }
+
   show () {
     if (!snackbars.length) {
       snackbarDom.className = ''
@@ -35,10 +39,17 @@ class Snackbar {
 
       snackbarDom.innerHTML = this.message
       snackbars.push(this)
-      setTimeout(function () {
-        snackbarDom.classList.replace('opened', 'closed')
-        snackbars.pop()
+      this.timeout = setTimeout(function () {
+        snackbars.pop().hide()
       }, 3000)
+    } else {
+      let activeSnackbar = snackbars.pop()
+      clearTimeout(activeSnackbar.timeout)
+      activeSnackbar.hide()
+      let me = this // im too lazy to bind the 'this'
+      setTimeout(function () {
+        me.show()
+      }, 500)
     }
   }
 }
