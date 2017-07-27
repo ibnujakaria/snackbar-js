@@ -38,6 +38,7 @@ class Snackbar {
       snackbars.push(this)
       setTimeout(function () {
         snackbarDom.classList.replace('opened', 'closed')
+        snackbars.pop()
       }, 3000)
     }
   }
