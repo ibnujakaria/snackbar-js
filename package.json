@@ -2,7 +2,7 @@
   "name": "snackbar-js",
   "version": "1.0.5",
   "description": "A simple yet js library to display material-design-styled snackbar",
-  "main": "snackbar.js",
+  "main": "dist/snackbar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --open",
@@ -10,6 +10,17 @@
   },
   "author": "Ibnu Jakaria <ibnujakaria@outlook.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ibnujakaria/snackbar-js/issues",
+    "email": "ibnujakaria@outlook.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibnujakaria/snackbar-js.git"
+  },
+  "keywords": [
+    "Material design snackbar", "snackbar"
+  ],
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
