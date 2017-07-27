@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-* {
-  font-family: 'Roboto', sans-serif;
+#snackbar {
+  position: fixed;
+  bottom: 10px;
+  background-color: #323232;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Roboto Regular', sans-serif;
+  min-width: 288px;
+  max-width: 568px;
+  color: white;
+  border-radius: 2px;
+  padding: 14px 24px 14px 24px;
+  line-height: 1.5;
+  vertical-align: center;
+  box-sizing: border-box;
+  display: block;
+  opacity: 0;
+  transform: translateY(100%);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+#snackbar.opened {
+  opacity: 1;
+  transform: translate(0, 0);
 }

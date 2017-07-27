@@ -1,3 +1,13 @@
 import Snackbar from './snackbar'
 
-window.alert(Snackbar.message)
+let middleButton = document.getElementById('middle-button')
+
+middleButton.addEventListener('click', onMiddleButtonClicked)
+
+function onMiddleButtonClicked () {
+  Snackbar
+    .create()
+    .setStyle('center')
+    .setText('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,')
+    .show()
+}
