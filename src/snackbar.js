@@ -35,7 +35,7 @@ class Snackbar {
   show () {
     if (!snackbars.length) {
       snackbarDom.className = ''
-      snackbarDom.classList.add('opened', this.style)
+      snackbarDom.classList.add('opened', this.style + '-style')
 
       snackbarDom.innerHTML = this.message
       snackbars.push(this)
