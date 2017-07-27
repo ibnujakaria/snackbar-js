@@ -54,9 +54,13 @@ class Snackbar {
   }
 }
 
-export default {
+let result = {
   snackbars: snackbars,
   create () {
     return new Snackbar()
   }
 }
+
+window.Snackbar = result
+
+export default result
