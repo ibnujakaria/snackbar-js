@@ -1,6 +1,6 @@
 import './assets/css/snackbar.css'
 
-// this u
+// this holds the current snackbars
 let snackbars = []
 
 var snackbarDom = document.getElementById('snackbar')
@@ -12,6 +12,7 @@ if (!snackbarDom) {
 
 class Snackbar {
   constructor (message) {
+    this.id = snackbars.length
     this.message = message
     this.style = 'left'
     return this
@@ -29,11 +30,16 @@ class Snackbar {
   }
 
   show () {
-    snackbarDom.className = '' // clear the classess
-    snackbarDom.classList.add('opened')
+    if (!snackbars.length) {
+      snackbarDom.className = '' // clear the classess
+      snackbarDom.classList.add('opened')
 
-    snackbarDom.innerHTML = this.message
-    console.log(snackbarDom)
+      snackbarDom.innerHTML = this.message
+      snackbars.push(this)
+      setTimeout(function () {
+        snackbarDom.classList.replace('opened', 'closed')
+      }, 3000)
+    }
   }
 }
 
