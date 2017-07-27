@@ -61,6 +61,8 @@ let result = {
   }
 }
 
-window.Snackbar = result
+if (window) {
+  window.Snackbar = result
+}
 
 export default result
