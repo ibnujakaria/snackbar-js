@@ -1,6 +1,6 @@
 {
   "name": "snackbar-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple yet js library to display material-design-styled snackbar",
   "main": "snackbar.js",
   "scripts": {
