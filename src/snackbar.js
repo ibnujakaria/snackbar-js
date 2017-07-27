@@ -25,14 +25,13 @@ class Snackbar {
 
   setStyle (style) {
     this.style = style
-    snackbarDom.classList.add(this.style)
     return this
   }
 
   show () {
     if (!snackbars.length) {
-      snackbarDom.className = '' // clear the classess
-      snackbarDom.classList.add('opened')
+      snackbarDom.className = ''
+      snackbarDom.classList.add('opened', this.style)
 
       snackbarDom.innerHTML = this.message
       snackbars.push(this)

@@ -2,7 +2,7 @@
 
 #snackbar {
   position: fixed;
-  bottom: 10px;
+  bottom: 0;
   background-color: #323232;
   text-align: center;
   font-size: 14px;
@@ -18,12 +18,24 @@
   display: block;
   opacity: 0;
   transform: translateY(100%);
-  transition-property: transform, opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
+}
+
+#snackbar.center {
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #snackbar.opened {
   opacity: 1;
   transform: translate(0, 0);
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+#snackbar.closed {
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
 }
