@@ -47,3 +47,7 @@
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 }
+
+#snackbar.left-style.closed {
+  opacity: 0;
+}
