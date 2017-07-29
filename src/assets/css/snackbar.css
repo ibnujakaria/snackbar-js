@@ -14,7 +14,6 @@
   vertical-align: center;
   box-sizing: border-box;
   display: block;
-  opacity: 0;
   transform: translateY(100%);
   z-index: 9999;
 }
@@ -37,7 +36,6 @@
 }
 
 #snackbar.opened {
-  opacity: 1;
   transform: translate(0, 0);
   transition-property: transform, opacity;
   transition-duration: 0.5s;

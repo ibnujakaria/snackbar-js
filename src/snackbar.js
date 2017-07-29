@@ -29,7 +29,10 @@ class Snackbar {
   }
 
   hide () {
-    snackbarDom.classList.replace('opened', 'closed')
+    // this doesn't work in chrome
+    // snackbarDom.classList.replace('opened', 'closed')
+    snackbarDom.classList.remove('opened')
+    snackbarDom.classList.add('closed')
   }
 
   show () {
